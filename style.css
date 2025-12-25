@@ -107,12 +107,13 @@ h1{
 }
 .ph:hover{
     box-shadow: 0px 10px 30px 0px red;
+    transition: 1.2s;
 }
-body:has(.ph:hover), body:has(.ph:focus) {
+/* body:has(.ph:hover), body:has(.ph:focus) {
     background-image: url(https://i.pinimg.com/736x/4a/a4/77/4aa477e4839e108ac059774481ec80b4.jpg);
     background-position: none;
     background-repeat: inherit;
     background-size: cover;
     background-clip: inherit;
-    /* cursor: url(photo/Toyota Initial D AE86 Animated--cursor--SweezyCursors.png), auto; */
-}
+    cursor: url(photo/Toyota Initial D AE86 Animated--cursor--SweezyCursors.png), auto;
+} */
