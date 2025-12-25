@@ -1,3 +1,107 @@
+/* @import url('https://fonts.cdfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdfonts.com/css/poppins'); */
+
+
 body{
     background: rgb(128, 128, 128);
+    overflow: hidden;
+}
+.block{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.block .card{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 50s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg );
+    }
+}
+.block .card .card1{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+    rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(550px);
+}
+.block .card .card1 .ph{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.block .block1{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.block .block1 h1{
+    font-family: 'ICA Rubik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.block .block1 h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-block1);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.block .block1 .card2{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.block .block1 h2{
+    font-size: 3em;
+}
+.block .block1 .card3{
+    background-image: url(photo/—Pngtree—game\ character_15750733.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+.block1{
+    position: relative;
+}
+h1{
+    position: absolute;
+    top: 220px;
+}
+.card2{
+    position: absolute;
+    left: 1400px;
+    top: 380px;
+    max-width: 400px;
 }
